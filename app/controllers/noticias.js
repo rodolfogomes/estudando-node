@@ -3,6 +3,8 @@ module.exports.noticias = function(application, req, res){
 	var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
 	noticiasModel.getNoticias(function(error, result){
+		if(error)
+			console.log(error)
 		res.render("noticias/noticias", {noticias : result});
 	});	
 }
@@ -12,6 +14,8 @@ module.exports.noticia = function(application, req, res){
 	var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
 	noticiasModel.getNoticia(function(error, result){
+		if(error)
+			console.log(error)
 		res.render("noticias/noticia", {noticia : result});
 	});	
 }
