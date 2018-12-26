@@ -4,11 +4,12 @@ const connMySQL = ()=>{
 	return mysql.createConnection({
 		host : 'localhost',
 		user : 'root',
-		password : '1234',
+		password : 'mysql',
 		database : 'portal_noticias'
 	});
 }
 
 module.exports =  ()=> {
+	
 	return connMySQL;
 }
