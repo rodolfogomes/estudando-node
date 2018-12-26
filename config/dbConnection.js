@@ -4,7 +4,7 @@ const connMySQL = ()=>{
 	return mysql.createConnection({
 		host : 'localhost',
 		user : 'root',
-		password : 'mysql',
+		password : 'mysql@2089',
 		database : 'portal_noticias'
 	});
 }
