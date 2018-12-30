@@ -15,7 +15,7 @@ NoticiasDAO.prototype.salvarNoticia = function(noticia, callback){
 }
 
 NoticiasDAO.prototype.get5UltimasNoticias = function(callback){
-	this._connection.query('select * from noticias order by data_noticia limit 2',callback)
+	this._connection.query('select * from noticias order by data_noticia desc limit 5',callback)
 }
 
 module.exports = ()=>{
